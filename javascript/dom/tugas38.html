@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+        <meta charset="utf-8" />
+        <title>Tugas 38</title>
+        <style>
+            .contohcss{
+                color: red;
+            }
+        </style>
+ </head>
+ <body>
+        <button type="button" onclick="clicker()" name="button">Jalankan</button>
+        <br />
+        <br />
+        <hr />
+        Atribut <b>removeNamedItem()</b> : <br />
+        <input value="Inputan" /> <br />
+        <hr />
+        Atribut <b>setNamedItem()</b> : <br />
+        <h1>contoh</h1>
+        <hr />
+        Atribut <b>value()</b> :
+        <p id="ex">contoh</p>
+        <hr />
+ </body>
+ <script>
+     function clicker(){
+        var c = document.getElementsByTagName("h1")[0]
+        var b = document.createAttribute("class")
+        b.value = "contohcss"
+        c.attributes.setNamedItem(b)
+
+        var d = document.getElementsByTagName("button")[0]
+        var e = d.attributes[0].value
+        document.getElementById("ex").innerHTML=e
+
+        var a = document.getElementsByTagName("input")[0]
+        a.attributes.removeNamedItem("value")
+        a.attributes.removeNamedItem("type")
+     }
+ </script>
+</html>
