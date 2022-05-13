@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>42. onMouse Event</title>
+</head>
+<body>
+    <p onmouseover="changeColor(this)" onmouseout="outColor(this)">Bring it on!!!</p>
+</body>
+<script>
+    function changeColor(x){
+        x.style.color = "red"
+    }
+    function outColor(x){
+        x.style.color = "black"
+    }
+</script>
+</html>
